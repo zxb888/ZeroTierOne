@@ -115,10 +115,6 @@ EOF
 
 chmod +x /healthcheck.sh
 
-iptables -I FORWARD -i ztuc6cx7hq -j ACCEPT
-iptables -I FORWARD -o ztuc6cx7hq -j ACCEPT
-iptables -t nat -I POSTROUTING -o ztuc6cx7hq -j MASQUERADE
-
 log_params "zerotier-cli info:" "$(zerotier-cli info)"
 
 log "Sleeping infinitely"
